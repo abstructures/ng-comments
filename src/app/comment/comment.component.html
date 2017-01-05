@@ -1,0 +1,15 @@
+<div class="col-xs-12 col-md-2 avatar">
+    <div class="avatar-img"></div>
+</div>
+<div class="col-xs-12 col-md-8 content">
+    <p>{{ comment.body }}</p>
+    <ul class="info">
+        <li>{{ comment.name }}</li>
+        <li> {{timestamp}} </li>
+    </ul>
+</div>
+<div class="col-cs-12 col-md-2 likes">
+    <h2 [ngClass]="{'negative': comment.isNeg()}"> {{ comment.votes }}</h2>
+    <span class="up" (click)="voteUp()"> UP </span>
+    <span class="dwn" (click)="voteDwn()"> DWN </span>
+</div>
